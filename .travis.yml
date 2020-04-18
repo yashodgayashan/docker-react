@@ -6,4 +6,4 @@ before_install: # commands will execute before start test or deplay
   - docker build -t yashodperera/docker-react -f Dockerfile.dev .
 
 script: # To run our tests
-  - docker run yashodperera/docker-react npm run test -- --coverage
+  - docker run -e CI=true yashodperera/docker-react npm run test -- --coverage
